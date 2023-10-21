@@ -1,0 +1,671 @@
+openapi: 3.0.3
+info:
+  title: tacs
+  version: 1.0.0
+  description: 'tacs is the email marketing platform for developers.'
+servers:
+  - url: https://api.koldmail.com/v1
+security:
+  - bearerAuth: []
+tags:
+  - name: Groups
+    description: Group is used to organize your contacts.
+paths:
+  /groups/create:
+    post:
+      tags:
+        - Groups
+      summary: Create a group
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateGroupRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateGroupResponse'
+  /groups/list:
+    get:
+      tags:
+        - Groups
+      summary: List All Groups
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupListResponse'
+  /groups/{group_id}:
+    get:
+      tags:
+        - Groups
+      summary: Retrieve Group Using Group ID
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the group.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveGroupResponse'
+  /groups/{group_id}/update:
+    post:
+      tags:
+        - Groups
+      summary: Change Group Name
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the group.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateGroupRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateGroupResponse'    
+  /groups/{group_id}/delete:
+    post:
+      tags:
+        - Groups
+      summary: Delete a group
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the group.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteGroupResponse' 
+  /contacts/{group_id}/create:
+    post:
+      tags:
+        - Contacts
+      summary: Create a contact
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the contact.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateContactRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateContactResponse' 
+  /contacts/tags/{contact_id}/add:
+    post:
+      tags:
+        - Contacts
+      summary: Add the contact tags
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the contact.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddContactTagsRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddContactTagseResponse'
+  /contacts/tags/{contact_id}/remove:
+    post:
+      tags:
+        - Contacts
+      summary: Remove the contact tags
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the contact.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RemoveContactTagsRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RemoveContactTagseResponse'
+  /contacts/{group_id}/status/{contact_id}:
+    post:
+      tags:
+        - Contacts
+      summary: Update the contact
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the group.
+        - name: contact_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the contact.    
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateContactRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateContactResponse'        
+  /tags/create:
+    post:
+      tags:
+        - Tags
+      summary: Create your Tag
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTagRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTagResponse'
+  /tags/{tag_id}/update:
+    post:
+      tags:
+        - Tags
+      summary: Update your Tag
+      parameters:
+        - name: tag_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the tag.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateTagRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateTagResponse'              
+  /tags/{tag_id}:
+    get:
+      tags:
+        - Tags
+      summary: Retrieve your Tag
+      parameters:
+        - name: tag_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: The ID of the tag.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveTagResponse'
+  /tags/list:
+    get:
+      tags:
+        - Tags
+      summary: List your Tag
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListTagResponse'                            
+
+
+
+
+
+
+
+
+
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    CreateGroupRequest:
+      type: object
+      required:
+        - group_name
+      properties:
+        group_name:
+          type: string
+          description: Name of your group.
+    CreateGroupResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              group_id:
+                type: string
+                description: Created group ID.
+              group_name:
+                type: string
+                description: Created group name.
+    GroupListResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: Status code of the request.          
+        status:
+          type: string
+          description: Response.          
+        data:
+            type: object
+            properties:
+              group_id:
+                type: string
+                description: Created group ID.
+              group_name:
+                type: string
+                description: Created group name.  
+    RetrieveGroupResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: Status code of the request.          
+        status:
+          type: string
+          description: Response.          
+        data:
+            type: object
+            properties:
+              group_id:
+                type: string
+                description: Created group ID.
+              group_name:
+                type: string
+                description: Created group name.    
+    UpdateGroupRequest:
+      type: object
+      required:
+        - group_name
+      properties:
+        group_name:
+          type: string
+          description: Update a group name.
+    UpdateGroupResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              group_id:
+                type: string
+                description: Updated group ID.
+              group_name:
+                type: string
+                description: Updated group name.   
+    DeleteGroupResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              group_id:
+                type: string
+                description: Deleted group ID.   
+    CreateContactRequest:
+      type: object
+      required:
+        - email
+        - status
+        - data
+          - fullName
+          - phone
+          - gender
+          - address
+          - city
+          - state
+          - country
+          - zipcode
+      properties:
+        email:
+          type: string
+          description: email.
+        status:
+          type: string
+          description: status.
+        data:
+            type: object
+            properties:
+              fullName:
+                type: string
+                description: fullName.
+              phone:
+                type: string
+                description: phone.
+              gender:
+                type: string
+                description: gender.
+              address:
+                type: string
+                description: address.
+              city:
+                type: string
+                description: city.
+              state:
+                type: string
+                description: state.
+              country:
+                type: string
+                description: country.
+              zipcode:
+                type: string
+                description: zipcode.                   
+    CreateContactResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              fullName:
+                type: string
+                description: fullName.
+              phone:
+                type: string
+                description: phone.
+              gender:
+                type: string
+                description: gender.
+              address:
+                type: string
+                description: address.
+              city:
+                type: string
+                description: city.
+              state:
+                type: string
+                description: state.
+              country:
+                type: string
+                description: country.
+              zipcode:
+                type: string
+                description: zipcode. 
+    AddContactTagsRequest:
+      type: object
+      required:
+        - tag_id
+      properties:
+        tag_id:
+          type: string
+          description: ID of your tag.  
+    AddContactTagseResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              tag_id:
+                type: integer
+                description: Added tag ID.
+    RemoveContactTagsRequest:
+      type: object
+      required:
+        - tag_id
+      properties:
+        tag_id:
+          type: string
+          description: ID of your tag.  
+    RemoveContactTagseResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              tag_id:
+                type: integer
+                description: Removed contact ID.
+    UpdateContactRequest:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          description: status of your group.  
+    UpdateContactResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              contact_id:
+                type: integer
+                description: Updated contact ID.
+              group_id:
+                type: string
+                description: Updated group ID.
+              status:
+                type: string
+                description: Response. 
+    CreateTagRequest:
+      type: object
+      required:
+        - tag_name
+      properties:
+        tag_name:
+          type: string
+          description: Create a tag for your contact.
+    CreateTagResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              tag_id:
+                type: string
+                description: Created tag ID.
+              tag_name:
+                type: string
+                description: Created tag name. 
+    UpdateTagRequest:
+      type: object
+      required:
+        - tag_name
+      properties:
+        tag_name:
+          type: string
+          description: Update your tag.
+    UpdateTagResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          message:
+            type: string
+            description: Response description.
+          data:
+            type: object
+            properties:
+              tag_id:
+                type: string
+                description: Updated tag ID.
+              tag_name:
+                type: string
+                description: Updated tag name.
+    RetrieveTagResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          data:
+            type: object
+            properties:
+              tag_id:
+                type: string
+                description: Retrieved tag ID.
+              tag_name:
+                type: string
+                description: Retrieved tag name.
+    ListTagResponse:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: Status code of the request.
+          status:
+            type: string
+            description: Response
+          data:
+            type: object
+            properties:
+              tag_id:
+                type: string
+                description: Listed tag ID.
+              tag_name:
+                type: string
+                description: Listed tag name.                                                                                                                                 
