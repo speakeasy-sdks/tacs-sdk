@@ -15,15 +15,15 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/productionize-sdks/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add https://github.com/speakeasy-sdks/tacs-sdk
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add https://github.com/speakeasy-sdks/tacs-sdk
@@ -32,8 +32,6 @@ yarn add https://github.com/speakeasy-sdks/tacs-sdk
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Tacs } from "tacs";
 
@@ -58,17 +56,17 @@ import { Tacs } from "tacs";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [contacts](docs/sdks/contacts/README.md)
+### [contacts](docs/sdks/contacts/README.md)
 
 * [postContactsTagsContactIdAdd](docs/sdks/contacts/README.md#postcontactstagscontactidadd) - Add the contact tags
 * [postContactsTagsContactIdRemove](docs/sdks/contacts/README.md#postcontactstagscontactidremove) - Remove the contact tags
 * [postContactsGroupIdCreate](docs/sdks/contacts/README.md#postcontactsgroupidcreate) - Create a contact
 * [postContactsGroupIdStatusContactId](docs/sdks/contacts/README.md#postcontactsgroupidstatuscontactid) - Update the contact
 
-## [groups](docs/sdks/groups/README.md)
+### [groups](docs/sdks/groups/README.md)
 
 * [getGroupsList](docs/sdks/groups/README.md#getgroupslist) - List All Groups
 * [getGroupsGroupId](docs/sdks/groups/README.md#getgroupsgroupid) - Retrieve Group Using Group ID
@@ -76,7 +74,7 @@ import { Tacs } from "tacs";
 * [postGroupsGroupIdDelete](docs/sdks/groups/README.md#postgroupsgroupiddelete) - Delete a group
 * [postGroupsGroupIdUpdate](docs/sdks/groups/README.md#postgroupsgroupidupdate) - Change Group Name
 
-## [tags](docs/sdks/tags/README.md)
+### [tags](docs/sdks/tags/README.md)
 
 * [getTagsList](docs/sdks/tags/README.md#gettagslist) - List your Tag
 * [getTagsTagId](docs/sdks/tags/README.md#gettagstagid) - Retrieve your Tag
@@ -85,8 +83,6 @@ import { Tacs } from "tacs";
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
