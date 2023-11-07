@@ -1,5 +1,5 @@
 # Tags
-(*tags*)
+(*.tags*)
 
 ### Available Operations
 
@@ -23,6 +23,7 @@ import { Tacs } from "tacs";
   });
 
   const res = await sdk.tags.getTagsList();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,6 +61,7 @@ import { Tacs } from "tacs";
     tagId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -96,6 +98,7 @@ import { Tacs } from "tacs";
   const res = await sdk.tags.postTagsCreate({
     tagName: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -136,6 +139,7 @@ import { Tacs } from "tacs";
     },
     tagId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class AddContactTagseResponseData extends SpeakeasyBase {
+export class Data extends SpeakeasyBase {
     /**
      * Added tag ID.
      */
@@ -24,8 +24,8 @@ export class AddContactTagseResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
-    @Type(() => AddContactTagseResponseData)
-    data?: AddContactTagseResponseData;
+    @Type(() => Data)
+    data?: Data;
 
     /**
      * Response description.

@@ -1,5 +1,5 @@
 # Contacts
-(*contacts*)
+(*.contacts*)
 
 ### Available Operations
 
@@ -28,6 +28,7 @@ import { Tacs } from "tacs";
     },
     contactId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -68,6 +69,7 @@ import { Tacs } from "tacs";
     },
     contactId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -111,6 +113,7 @@ import { Tacs } from "tacs";
     groupId: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -151,6 +154,7 @@ import { Tacs } from "tacs";
     contactId: "string",
     groupId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

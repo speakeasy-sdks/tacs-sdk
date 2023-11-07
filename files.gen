@@ -34,7 +34,6 @@ src/sdk/models/operations/gettagslist.ts
 src/sdk/models/operations/gettagstagid.ts
 src/sdk/models/operations/posttagscreate.ts
 src/sdk/models/operations/posttagstagidupdate.ts
-src/sdk/models/operations/index.ts
 src/sdk/models/shared/addcontacttagseresponse.ts
 src/sdk/models/shared/addcontacttagsrequest.ts
 src/sdk/models/shared/removecontacttagseresponse.ts
@@ -57,8 +56,9 @@ src/sdk/models/shared/createtagrequest.ts
 src/sdk/models/shared/updatetagresponse.ts
 src/sdk/models/shared/updatetagrequest.ts
 src/sdk/models/shared/security.ts
-src/sdk/models/shared/index.ts
 src/sdk/models/errors/index.ts
+src/sdk/models/operations/index.ts
+src/sdk/models/shared/index.ts
 USAGE.md
 docs/models/operations/postcontactstagscontactidaddrequest.md
 docs/models/operations/postcontactstagscontactidaddresponse.md
@@ -82,7 +82,7 @@ docs/models/operations/gettagstagidresponse.md
 docs/models/operations/posttagscreateresponse.md
 docs/models/operations/posttagstagidupdaterequest.md
 docs/models/operations/posttagstagidupdateresponse.md
-docs/models/shared/addcontacttagseresponsedata.md
+docs/models/shared/data.md
 docs/models/shared/addcontacttagseresponse.md
 docs/models/shared/addcontacttagsrequest.md
 docs/models/shared/removecontacttagseresponsedata.md

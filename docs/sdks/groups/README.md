@@ -1,5 +1,5 @@
 # Groups
-(*groups*)
+(*.groups*)
 
 ## Overview
 
@@ -28,6 +28,7 @@ import { Tacs } from "tacs";
   });
 
   const res = await sdk.groups.getGroupsList();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -64,6 +65,7 @@ import { Tacs } from "tacs";
   const res = await sdk.groups.getGroupsGroupId({
     groupId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -102,6 +104,7 @@ import { Tacs } from "tacs";
     groupName: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -138,6 +141,7 @@ import { Tacs } from "tacs";
   const res = await sdk.groups.postGroupsGroupIdDelete({
     groupId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -178,6 +182,7 @@ import { Tacs } from "tacs";
     },
     groupId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
