@@ -31,7 +31,11 @@ export class Contacts {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/contacts/tags/{contact_id}/add", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/contacts/tags/{contact_id}/add",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -66,7 +70,7 @@ export class Contacts {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -131,7 +135,11 @@ export class Contacts {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/contacts/tags/{contact_id}/remove", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/contacts/tags/{contact_id}/remove",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -166,7 +174,7 @@ export class Contacts {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -231,7 +239,7 @@ export class Contacts {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/contacts/{group_id}/create", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/contacts/{group_id}/create", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -266,7 +274,7 @@ export class Contacts {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -331,7 +339,7 @@ export class Contacts {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/contacts/{group_id}/status/{contact_id}",
             req
@@ -370,7 +378,7 @@ export class Contacts {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

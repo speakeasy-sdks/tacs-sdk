@@ -1,5 +1,5 @@
 # Groups
-(*.groups*)
+(*groups*)
 
 ## Overview
 
@@ -29,7 +29,6 @@ import { Tacs } from "tacs";
 
   const res = await sdk.groups.getGroupsList();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -45,8 +44,12 @@ import { Tacs } from "tacs";
 
 ### Response
 
-**Promise<[operations.GetGroupsListResponse](../../models/operations/getgroupslistresponse.md)>**
+**Promise<[operations.GetGroupsListResponse](../../sdk/models/operations/getgroupslistresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getGroupsGroupId
 
@@ -66,7 +69,6 @@ import { Tacs } from "tacs";
     groupId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -75,16 +77,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetGroupsGroupIdRequest](../../models/operations/getgroupsgroupidrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetGroupsGroupIdRequest](../../sdk/models/operations/getgroupsgroupidrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.GetGroupsGroupIdResponse](../../models/operations/getgroupsgroupidresponse.md)>**
+**Promise<[operations.GetGroupsGroupIdResponse](../../sdk/models/operations/getgroupsgroupidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postGroupsCreate
 
@@ -104,7 +110,6 @@ import { Tacs } from "tacs";
     groupName: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -113,16 +118,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `request`                                                              | [shared.CreateGroupRequest](../../models/shared/creategrouprequest.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
-| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [shared.CreateGroupRequest](../../sdk/models/shared/creategrouprequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
 
 
 ### Response
 
-**Promise<[operations.PostGroupsCreateResponse](../../models/operations/postgroupscreateresponse.md)>**
+**Promise<[operations.PostGroupsCreateResponse](../../sdk/models/operations/postgroupscreateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postGroupsGroupIdDelete
 
@@ -142,7 +151,6 @@ import { Tacs } from "tacs";
     groupId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -151,16 +159,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PostGroupsGroupIdDeleteRequest](../../models/operations/postgroupsgroupiddeleterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.PostGroupsGroupIdDeleteRequest](../../sdk/models/operations/postgroupsgroupiddeleterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostGroupsGroupIdDeleteResponse](../../models/operations/postgroupsgroupiddeleteresponse.md)>**
+**Promise<[operations.PostGroupsGroupIdDeleteResponse](../../sdk/models/operations/postgroupsgroupiddeleteresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postGroupsGroupIdUpdate
 
@@ -183,7 +195,6 @@ import { Tacs } from "tacs";
     groupId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -192,13 +203,17 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PostGroupsGroupIdUpdateRequest](../../models/operations/postgroupsgroupidupdaterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.PostGroupsGroupIdUpdateRequest](../../sdk/models/operations/postgroupsgroupidupdaterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostGroupsGroupIdUpdateResponse](../../models/operations/postgroupsgroupidupdateresponse.md)>**
+**Promise<[operations.PostGroupsGroupIdUpdateResponse](../../sdk/models/operations/postgroupsgroupidupdateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

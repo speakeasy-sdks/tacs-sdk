@@ -1,5 +1,5 @@
 # Tags
-(*.tags*)
+(*tags*)
 
 ### Available Operations
 
@@ -24,7 +24,6 @@ import { Tacs } from "tacs";
 
   const res = await sdk.tags.getTagsList();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -40,8 +39,12 @@ import { Tacs } from "tacs";
 
 ### Response
 
-**Promise<[operations.GetTagsListResponse](../../models/operations/gettagslistresponse.md)>**
+**Promise<[operations.GetTagsListResponse](../../sdk/models/operations/gettagslistresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTagsTagId
 
@@ -61,7 +64,6 @@ import { Tacs } from "tacs";
     tagId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -70,16 +72,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.GetTagsTagIdRequest](../../models/operations/gettagstagidrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetTagsTagIdRequest](../../sdk/models/operations/gettagstagidrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.GetTagsTagIdResponse](../../models/operations/gettagstagidresponse.md)>**
+**Promise<[operations.GetTagsTagIdResponse](../../sdk/models/operations/gettagstagidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postTagsCreate
 
@@ -99,7 +105,6 @@ import { Tacs } from "tacs";
     tagName: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -108,16 +113,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| `request`                                                          | [shared.CreateTagRequest](../../models/shared/createtagrequest.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
-| `config`                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)       | :heavy_minus_sign:                                                 | Available config options for making requests.                      |
+| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `request`                                                              | [shared.CreateTagRequest](../../sdk/models/shared/createtagrequest.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
+| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
 
 
 ### Response
 
-**Promise<[operations.PostTagsCreateResponse](../../models/operations/posttagscreateresponse.md)>**
+**Promise<[operations.PostTagsCreateResponse](../../sdk/models/operations/posttagscreateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postTagsTagIdUpdate
 
@@ -140,7 +149,6 @@ import { Tacs } from "tacs";
     tagId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -149,13 +157,17 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.PostTagsTagIdUpdateRequest](../../models/operations/posttagstagidupdaterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PostTagsTagIdUpdateRequest](../../sdk/models/operations/posttagstagidupdaterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.PostTagsTagIdUpdateResponse](../../models/operations/posttagstagidupdateresponse.md)>**
+**Promise<[operations.PostTagsTagIdUpdateResponse](../../sdk/models/operations/posttagstagidupdateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

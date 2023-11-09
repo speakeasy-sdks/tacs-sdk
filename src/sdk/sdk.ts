@@ -48,9 +48,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.3.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 0.3.0 2.181.1 1.0.0 tacs";
+    sdkVersion = "0.3.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 0.3.1 2.185.0 1.0.0 tacs";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -78,7 +78,7 @@ export class Tacs {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             security: new shared.Security({ bearerAuth: props?.bearerAuth }),

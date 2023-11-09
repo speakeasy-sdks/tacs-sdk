@@ -24,7 +24,7 @@ export class Tags {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/tags/list";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/tags/list";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -41,7 +41,7 @@ export class Tags {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -104,7 +104,7 @@ export class Tags {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/tags/{tag_id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/tags/{tag_id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -121,7 +121,7 @@ export class Tags {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -184,7 +184,7 @@ export class Tags {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/tags/create";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/tags/create";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -215,7 +215,7 @@ export class Tags {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -279,7 +279,7 @@ export class Tags {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/tags/{tag_id}/update", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/tags/{tag_id}/update", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -310,7 +310,7 @@ export class Tags {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

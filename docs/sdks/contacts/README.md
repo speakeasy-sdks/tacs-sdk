@@ -1,5 +1,5 @@
 # Contacts
-(*.contacts*)
+(*contacts*)
 
 ### Available Operations
 
@@ -29,7 +29,6 @@ import { Tacs } from "tacs";
     contactId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -38,16 +37,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PostContactsTagsContactIdAddRequest](../../models/operations/postcontactstagscontactidaddrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.PostContactsTagsContactIdAddRequest](../../sdk/models/operations/postcontactstagscontactidaddrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.PostContactsTagsContactIdAddResponse](../../models/operations/postcontactstagscontactidaddresponse.md)>**
+**Promise<[operations.PostContactsTagsContactIdAddResponse](../../sdk/models/operations/postcontactstagscontactidaddresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postContactsTagsContactIdRemove
 
@@ -70,7 +73,6 @@ import { Tacs } from "tacs";
     contactId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -79,16 +81,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PostContactsTagsContactIdRemoveRequest](../../models/operations/postcontactstagscontactidremoverequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.PostContactsTagsContactIdRemoveRequest](../../sdk/models/operations/postcontactstagscontactidremoverequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.PostContactsTagsContactIdRemoveResponse](../../models/operations/postcontactstagscontactidremoveresponse.md)>**
+**Promise<[operations.PostContactsTagsContactIdRemoveResponse](../../sdk/models/operations/postcontactstagscontactidremoveresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postContactsGroupIdCreate
 
@@ -113,7 +119,6 @@ import { Tacs } from "tacs";
     groupId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -122,16 +127,20 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PostContactsGroupIdCreateRequest](../../models/operations/postcontactsgroupidcreaterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.PostContactsGroupIdCreateRequest](../../sdk/models/operations/postcontactsgroupidcreaterequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PostContactsGroupIdCreateResponse](../../models/operations/postcontactsgroupidcreateresponse.md)>**
+**Promise<[operations.PostContactsGroupIdCreateResponse](../../sdk/models/operations/postcontactsgroupidcreateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postContactsGroupIdStatusContactId
 
@@ -155,7 +164,6 @@ import { Tacs } from "tacs";
     groupId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -164,13 +172,17 @@ import { Tacs } from "tacs";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.PostContactsGroupIdStatusContactIdRequest](../../models/operations/postcontactsgroupidstatuscontactidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.PostContactsGroupIdStatusContactIdRequest](../../sdk/models/operations/postcontactsgroupidstatuscontactidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.PostContactsGroupIdStatusContactIdResponse](../../models/operations/postcontactsgroupidstatuscontactidresponse.md)>**
+**Promise<[operations.PostContactsGroupIdStatusContactIdResponse](../../sdk/models/operations/postcontactsgroupidstatuscontactidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

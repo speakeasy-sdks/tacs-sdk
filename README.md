@@ -59,14 +59,14 @@ import { Tacs } from "tacs";
 ## Available Resources and Operations
 
 
-### [.contacts](docs/sdks/contacts/README.md)
+### [contacts](docs/sdks/contacts/README.md)
 
 * [postContactsTagsContactIdAdd](docs/sdks/contacts/README.md#postcontactstagscontactidadd) - Add the contact tags
 * [postContactsTagsContactIdRemove](docs/sdks/contacts/README.md#postcontactstagscontactidremove) - Remove the contact tags
 * [postContactsGroupIdCreate](docs/sdks/contacts/README.md#postcontactsgroupidcreate) - Create a contact
 * [postContactsGroupIdStatusContactId](docs/sdks/contacts/README.md#postcontactsgroupidstatuscontactid) - Update the contact
 
-### [.groups](docs/sdks/groups/README.md)
+### [groups](docs/sdks/groups/README.md)
 
 * [getGroupsList](docs/sdks/groups/README.md#getgroupslist) - List All Groups
 * [getGroupsGroupId](docs/sdks/groups/README.md#getgroupsgroupid) - Retrieve Group Using Group ID
@@ -74,7 +74,7 @@ import { Tacs } from "tacs";
 * [postGroupsGroupIdDelete](docs/sdks/groups/README.md#postgroupsgroupiddelete) - Delete a group
 * [postGroupsGroupIdUpdate](docs/sdks/groups/README.md#postgroupsgroupidupdate) - Change Group Name
 
-### [.tags](docs/sdks/tags/README.md)
+### [tags](docs/sdks/tags/README.md)
 
 * [getTagsList](docs/sdks/tags/README.md#gettagslist) - List your Tag
 * [getTagsTagId](docs/sdks/tags/README.md#gettagstagid) - Retrieve your Tag
@@ -91,9 +91,39 @@ import { Tacs } from "tacs";
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 
+## Example
+
+```typescript
+import { Tacs } from "tacs";
+
+(async () => {
+    const sdk = new Tacs({
+        bearerAuth: "",
+    });
+
+    let res;
+    try {
+        res = await sdk.contacts.postContactsTagsContactIdAdd({
+            addContactTagsRequest: {
+                tagId: "string",
+            },
+            contactId: "string",
+        });
+    } catch (e) {}
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
 <!-- End Error Handling -->
 
 
@@ -184,19 +214,16 @@ const httpClient = axios.create({
 
 const sdk = new Tacs({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name         | Type         | Scheme       |
 | ------------ | ------------ | ------------ |
