@@ -59,7 +59,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/postcontactstagscontactidaddrequest.md
 docs/sdk/models/operations/postcontactstagscontactidaddresponse.md
 docs/sdk/models/operations/postcontactstagscontactidremoverequest.md
@@ -122,4 +121,5 @@ docs/sdks/tacs/README.md
 docs/sdks/contacts/README.md
 docs/sdks/groups/README.md
 docs/sdks/tags/README.md
+USAGE.md
 .gitattributes

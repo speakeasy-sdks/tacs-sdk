@@ -17,9 +17,9 @@ List your Tag
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.tags.getTagsList();
@@ -27,7 +27,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -55,9 +57,9 @@ Retrieve your Tag
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.tags.getTagsTagId({
@@ -67,7 +69,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -96,9 +100,9 @@ Create your Tag
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.tags.postTagsCreate({
@@ -108,7 +112,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -137,9 +143,9 @@ Update your Tag
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.tags.postTagsTagIdUpdate({
@@ -152,7 +158,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

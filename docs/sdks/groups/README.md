@@ -22,9 +22,9 @@ List All Groups
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.groups.getGroupsList();
@@ -32,7 +32,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -60,9 +62,9 @@ Retrieve Group Using Group ID
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.groups.getGroupsGroupId({
@@ -72,7 +74,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -101,9 +105,9 @@ Create a group
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.groups.postGroupsCreate({
@@ -113,7 +117,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -142,9 +148,9 @@ Delete a group
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.groups.postGroupsGroupIdDelete({
@@ -154,7 +160,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -183,9 +191,9 @@ Change Group Name
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.groups.postGroupsGroupIdUpdate({
@@ -198,7 +206,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -17,9 +17,9 @@ Add the contact tags
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.contacts.postContactsTagsContactIdAdd({
@@ -32,7 +32,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -61,9 +63,9 @@ Remove the contact tags
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.contacts.postContactsTagsContactIdRemove({
@@ -76,7 +78,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -105,9 +109,9 @@ Create a contact
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.contacts.postContactsGroupIdCreate({
@@ -122,7 +126,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -151,9 +157,9 @@ Update the contact
 ```typescript
 import { Tacs } from "tacs";
 
-(async() => {
+async function run() {
   const sdk = new Tacs({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.contacts.postContactsGroupIdStatusContactId({
@@ -167,7 +173,9 @@ import { Tacs } from "tacs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
