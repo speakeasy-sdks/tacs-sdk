@@ -24,9 +24,9 @@ async function run() {
 
   const res = await sdk.contacts.postContactsTagsContactIdAdd({
     addContactTagsRequest: {
-      tagId: "string",
+      tagId: "<value>",
     },
-    contactId: "string",
+    contactId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -70,9 +70,9 @@ async function run() {
 
   const res = await sdk.contacts.postContactsTagsContactIdRemove({
     removeContactTagsRequest: {
-      tagId: "string",
+      tagId: "<value>",
     },
-    contactId: "string",
+    contactId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -118,9 +118,9 @@ async function run() {
     createContactRequest: {
       data: {},
       email: "Bianka2@yahoo.com",
-      status: "string",
+      status: "<value>",
     },
-    groupId: "string",
+    groupId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -164,10 +164,10 @@ async function run() {
 
   const res = await sdk.contacts.postContactsGroupIdStatusContactId({
     updateContactRequest: {
-      status: "string",
+      status: "<value>",
     },
-    contactId: "string",
-    groupId: "string",
+    contactId: "<value>",
+    groupId: "<value>",
   });
 
   if (res.statusCode == 200) {

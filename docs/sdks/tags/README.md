@@ -63,7 +63,7 @@ async function run() {
   });
 
   const res = await sdk.tags.getTagsTagId({
-    tagId: "string",
+    tagId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -106,7 +106,7 @@ async function run() {
   });
 
   const res = await sdk.tags.postTagsCreate({
-    tagName: "string",
+    tagName: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -150,9 +150,9 @@ async function run() {
 
   const res = await sdk.tags.postTagsTagIdUpdate({
     updateTagRequest: {
-      tagName: "string",
+      tagName: "<value>",
     },
-    tagId: "string",
+    tagId: "<value>",
   });
 
   if (res.statusCode == 200) {

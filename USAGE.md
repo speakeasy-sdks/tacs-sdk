@@ -9,9 +9,9 @@ async function run() {
 
     const res = await sdk.contacts.postContactsTagsContactIdAdd({
         addContactTagsRequest: {
-            tagId: "string",
+            tagId: "<value>",
         },
-        contactId: "string",
+        contactId: "<value>",
     });
 
     if (res.statusCode == 200) {

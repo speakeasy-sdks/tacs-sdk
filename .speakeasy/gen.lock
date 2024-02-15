@@ -4,15 +4,15 @@ management:
   docChecksum: aa82a2fad0c9e7508ce398a8f800e71a
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.4.1
-  configChecksum: 0b658797db428ab19b6b0fb3bf313e7d
+  generationVersion: 2.258.2
+  releaseVersion: 0.4.2
+  configChecksum: c02a49dff6361d79b9e000b50441f364
   repoURL: https://github.com/speakeasy-sdks/tacs-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/tacs-sdk
 features:
   typescript:
-    core: 3.4.1
+    core: 3.4.7
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 generatedFiles:

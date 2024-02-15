@@ -68,7 +68,7 @@ async function run() {
   });
 
   const res = await sdk.groups.getGroupsGroupId({
-    groupId: "string",
+    groupId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -111,7 +111,7 @@ async function run() {
   });
 
   const res = await sdk.groups.postGroupsCreate({
-    groupName: "string",
+    groupName: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -154,7 +154,7 @@ async function run() {
   });
 
   const res = await sdk.groups.postGroupsGroupIdDelete({
-    groupId: "string",
+    groupId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -198,9 +198,9 @@ async function run() {
 
   const res = await sdk.groups.postGroupsGroupIdUpdate({
     updateGroupRequest: {
-      groupName: "string",
+      groupName: "<value>",
     },
-    groupId: "string",
+    groupId: "<value>",
   });
 
   if (res.statusCode == 200) {
