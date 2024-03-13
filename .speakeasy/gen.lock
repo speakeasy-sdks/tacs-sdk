@@ -3,18 +3,18 @@ id: d06dab97-9fdb-43c5-969f-fc9cdd82d6a5
 management:
   docChecksum: aa82a2fad0c9e7508ce398a8f800e71a
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.258.2
-  releaseVersion: 0.4.2
-  configChecksum: c02a49dff6361d79b9e000b50441f364
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 0.4.3
+  configChecksum: 25f413472162ba66c8f57266db2119f9
   repoURL: https://github.com/speakeasy-sdks/tacs-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/tacs-sdk
 features:
   typescript:
-    core: 3.4.7
-    globalSecurity: 2.82.2
-    globalServerURLs: 2.82.1
+    core: 3.4.8
+    globalSecurity: 2.82.4
+    globalServerURLs: 2.82.2
 generatedFiles:
   - src/sdk/contacts.ts
   - src/sdk/groups.ts
