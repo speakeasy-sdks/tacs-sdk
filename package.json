@@ -1,6 +1,6 @@
 {
   "name": "tacs",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "author": "naveen",
   "scripts": {
     "prepare": "tsc --build",
